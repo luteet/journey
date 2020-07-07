@@ -33,6 +33,10 @@ $(function () {
         console.log(i);
     } */
 
+    let scene_1 = $('.parallax__header--box').get(0),
+    scene_2 = $('.parallax__about--box').get(0),
+    parallaxInstance_1 = new Parallax(scene_1),
+    parallaxInstance_2 = new Parallax(scene_2);
 
     hHeaderCustomer({
         elemName: $('.header__top'),
@@ -57,7 +61,8 @@ $(function () {
         let line_menu = $('.menu__line'),
             btn_left = $(menu_btn[0]).offset().left,
             btn_top = $(header_top).height() - $(line_menu).height(),
-            line_width = $(menu_btn[0]).width();
+            line_width = $(menu_btn[0]).width(),
+            manParallax = $('.man-li').data().depth;
 
             function scollBarWidthFunc() {
                 scrollBarWidth = $('body').width();
@@ -66,13 +71,15 @@ $(function () {
                 $('body').removeClass('lock');
             }
             scollBarWidthFunc();
-
-
+            /* console.log($('.man-li').data().depth); */
+            $('.man-li').data().depth = 0.20;
     function screenSize() {
         if ($(window).width() <= 767) {
             $(header_social).appendTo('.header__top--container');
             $(menu_list).fadeOut(0);
             scollBarWidthFunc();
+            
+            console.log($('.man-li').data().depth);
             /* phone_btn_check = true;
             $(phone_btn).appendTo($(menu_list)).css('display', 'block');
             $(menu).css('display', 'none');
@@ -200,11 +207,5 @@ $(function () {
     
     parallax() */
 
-    let scene_1 = $('.parallax__header--box').get(0),
-        scene_2 = $('.parallax__about--box').get(0),
-        parallaxInstance_1 = new Parallax(scene_1),
-        parallaxInstance_2 = new Parallax(scene_2);
-
-
-
+    
 });
