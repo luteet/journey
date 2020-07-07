@@ -2281,6 +2281,7 @@ button {
   z-index: 3;
   background-color: #fff;
   padding: 15px;
+  min-width: 500px;
   max-width: 50%;
   -webkit-transform: translate(-15%, 0%);
       -ms-transform: translate(-15%, 0%);
@@ -2468,7 +2469,6 @@ button {
 @media (max-width: 1550px) {
   .about__content--body {
     max-width: 75%;
-    min-width: 500px;
   }
 }
 
