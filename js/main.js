@@ -84,7 +84,7 @@ $(function () {
             $(phone_btn).appendTo($(menu_list)).css('display', 'block');
             $(menu).css('display', 'none');
             $(burger).removeClass('active'); */
-            $('.menu__ul--li').hover(
+            /* $('.menu__ul--li').hover(
                 function () {
                     return false;
                     
@@ -92,14 +92,14 @@ $(function () {
                 function () {
                     return false;
                 },
-            );
+            ); */
 
         }
         else if ($(window).width() > 767) {
             $(line_menu).css('left', btn_left + 'px').css('width', line_width + 'px').css('top', btn_top + 'px').css('opacity', '0');
             scollBarWidthFunc();
             $(header_social).appendTo(menu);
-            $('.menu__ul--li').hover(
+            /* $('.menu__ul--li').hover(
                 function () {
                     btn_left = $(this).children(menu_btn).offset().left;
                     line_width = $(this).children(menu_btn).width();
@@ -110,11 +110,8 @@ $(function () {
                     btn_left = $(menu_btn[0]).offset().left,
                     line_width = $(menu_btn[0]).width();
                     $(line_menu).css('width', line_width + 'px').css('left', btn_left + 'px').css('opacity', '0');
-                },
-            );
-            /* phone_btn_check = false;
-            $(phone_btn).appendTo($(header_top)).css('display', 'block');;
-            $(menu).css('display', 'block'); */
+                }); */
+            
         }
     }
     screenSize()

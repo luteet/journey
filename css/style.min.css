@@ -2300,6 +2300,23 @@ button {
   margin: 0 0 25px 0;
 }
 
+.gallery__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 200px;
+  grid-template-columns: 100px 200px;
+}
+
+.item {
+  background-color: red;
+  -ms-grid-rows: 100px;
+  grid-template-rows: 100px;
+}
+
+.item:nth-child(odd) {
+  background: green;
+}
+
 @media (min-width: 600px) {
   .nature-bg {
     height: 125%;
@@ -2451,6 +2468,7 @@ button {
 @media (max-width: 1550px) {
   .about__content--body {
     max-width: 75%;
+    min-width: 500px;
   }
 }
 
@@ -2536,6 +2554,10 @@ button {
     -webkit-transform: translate(100%, 0%);
         -ms-transform: translate(100%, 0%);
             transform: translate(100%, 0%);
+  }
+
+  .about__content--body {
+    min-width: 320px;
   }
 }
 
