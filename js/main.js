@@ -6,7 +6,8 @@ $(function () {
 
     let image_height = 0,
         image_srcNotWebp,
-        image_src = '.webp-bg';
+        image_src_bg = '.webp-bg';
+        image_src_href = '.webp-href';
 
     function ThisIsWebP() {
         let def = $.Deferred(), crimg = new Image();
@@ -17,26 +18,47 @@ $(function () {
     }
 
     ThisIsWebP().then(function () {
-        $.each($(image_src), function () {
+        $.each($(image_src_bg), function () {
         });
+        
     }
         , function () {
-            $.each($(image_src), function () {
+            $.each($(image_src_bg), function () {
                 image_srcNotWebp = $(this).data('notwebp');
                 $(this).css('background-image', 'url("' + image_srcNotWebp + '")');
-
+                
+            });
+            $.each($(image_src_href), function () {
+                image_srcNotWebp = $(this).data('notwebp');
+                $(this).attr('href', image_srcNotWebp);
             });
 
         });
 
-    /* for(let i = 0; i < 3; i++) {
-        console.log(i);
-    } */
+        $('.gallery__item').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function(item) {
+                    
+                }
+            }
+        });
 
     let scene_1 = $('.parallax__header--box').get(0),
     scene_2 = $('.parallax__about--box').get(0),
+    /* scene_3 = $('.parallax__gallery--box-1').get(0), */
     parallaxInstance_1 = new Parallax(scene_1),
     parallaxInstance_2 = new Parallax(scene_2);
+    /* parallaxInstance_3 = new Parallax(scene_3); */
 
     hHeaderCustomer({
         elemName: $('.header__top'),
@@ -72,34 +94,33 @@ $(function () {
             }
             scollBarWidthFunc();
             /* console.log($('.man-li').data().depth); */
-            $('.man-li').data().depth = 0.20;
+            /* $('.man-li').data().depth = 0.20; */
     function screenSize() {
         if ($(window).width() <= 767) {
             $(header_social).appendTo('.header__top--container');
             $(menu_list).fadeOut(0);
             scollBarWidthFunc();
-            
-            console.log($('.man-li').data().depth);
+
             /* phone_btn_check = true;
             $(phone_btn).appendTo($(menu_list)).css('display', 'block');
             $(menu).css('display', 'none');
             $(burger).removeClass('active'); */
-            /* $('.menu__ul--li').hover(
+            $('.menu__ul--li').hover(
                 function () {
                     return false;
                     
                 },
                 function () {
                     return false;
-                },
-            ); */
+                }
+            );
 
         }
         else if ($(window).width() > 767) {
             $(line_menu).css('left', btn_left + 'px').css('width', line_width + 'px').css('top', btn_top + 'px').css('opacity', '0');
             scollBarWidthFunc();
             $(header_social).appendTo(menu);
-            /* $('.menu__ul--li').hover(
+            $('.menu__ul--li').hover(
                 function () {
                     btn_left = $(this).children(menu_btn).offset().left;
                     line_width = $(this).children(menu_btn).width();
@@ -110,7 +131,7 @@ $(function () {
                     btn_left = $(menu_btn[0]).offset().left,
                     line_width = $(menu_btn[0]).width();
                     $(line_menu).css('width', line_width + 'px').css('left', btn_left + 'px').css('opacity', '0');
-                }); */
+                });
             
         }
     }
