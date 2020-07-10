@@ -84,13 +84,13 @@ $(function () {
             btn_left = $(menu_btn[0]).offset().left,
             btn_top = $(header_top).height() - $(line_menu).height(),
             line_width = $(menu_btn[0]).width(),
-            manParallax = $('.man-li').data().depth;
+            headerScroll = $('.header__top').offset().top;
 
             function scollBarWidthFunc() {
                 scrollBarWidth = $('body').width();
-                $('body').addClass('lock');
+                $('body, html').addClass('lock');
                 scrollBarWidth = $('body').width() - scrollBarWidth;
-                $('body').removeClass('lock');
+                $('body, html').removeClass('lock');
             }
             scollBarWidthFunc();
             /* console.log($('.man-li').data().depth); */
@@ -154,7 +154,7 @@ $(function () {
             else {
                 $(bg).fadeOut(0);
             }
-            $('body').toggleClass('lock');
+            $('body, html').toggleClass('lock');
     }
 
         $(burger).on('click', function () {
