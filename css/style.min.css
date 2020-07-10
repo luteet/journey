@@ -2324,9 +2324,9 @@ button {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  -webkit-transform: translate(50%, 0%);
-      -ms-transform: translate(50%, 0%);
-          transform: translate(50%, 0%);
+  -webkit-transform: translate(100%, 0%);
+      -ms-transform: translate(100%, 0%);
+          transform: translate(100%, 0%);
 }
 
 .menu__ul.active {
@@ -3163,6 +3163,14 @@ button {
 @media (max-width: 768px) {
   .text-body {
     border-radius: 50px 50px 0 0;
+  }
+
+  .social svg {
+    width: 33px;
+  }
+
+  .social__btn:not(:first-child) {
+    margin: 0 0 0 7px;
   }
 
   .title-h1 {
