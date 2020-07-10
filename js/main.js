@@ -88,9 +88,9 @@ $(function () {
 
             function scollBarWidthFunc() {
                 scrollBarWidth = $('body').width();
-                $('body, html').addClass('lock');
+                $('body').addClass('lock');
                 scrollBarWidth = $('body').width() - scrollBarWidth;
-                $('body, html').removeClass('lock');
+                $('body').removeClass('lock');
             }
             scollBarWidthFunc();
             /* console.log($('.man-li').data().depth); */
@@ -148,13 +148,14 @@ $(function () {
             $(burger).toggleClass('active');
             $(menu_list).fadeIn(0).toggleClass('active');
             if(burger.hasClass('active')) {
-                $('body').css('padding', '0 ' + scrollBarWidth + 'px ' + '0 0');
+                $('body, .header__top').css('transition', 'all 0s ease').css('padding', '0 ' + scrollBarWidth + 'px ' + '0 0');
                 $(bg).fadeIn(500);
             }
             else {
+                $('body, .header__top').css('padding', '0');
                 $(bg).fadeOut(0);
             }
-            $('body, html').toggleClass('lock');
+            $('body').toggleClass('lock');
     }
 
         $(burger).on('click', function () {
