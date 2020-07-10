@@ -2315,7 +2315,7 @@ button {
 
 .menu__ul {
   margin: 0 25px 0 0;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
