@@ -148,12 +148,12 @@ $(function () {
             $(burger).toggleClass('active');
             $(menu_list).fadeIn(0).toggleClass('active');
             if(burger.hasClass('active')) {
-                $('body, .header__top').css('transition', 'all 0s ease').css('padding', '0 ' + scrollBarWidth + 'px ' + '0 0');
+                $('body').css('padding', '0 ' + scrollBarWidth + 'px ' + '0 0');
                 $('body').css('overflow', 'hidden');
                 /* $(bg).fadeIn(500); */
             }
             else {
-                $('body, .header__top').css('padding', '0');
+                $('body').css('padding', '0');
                 $('body').css('overflow', 'scroll');
                 /* $(bg).fadeOut(0); */
             }
