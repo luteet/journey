@@ -2161,7 +2161,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 body {
   position: relative;
-  overflow: hidden;
 }
 
 body.lock {
@@ -2316,7 +2315,7 @@ button {
 .menu__ul {
   margin: 0 25px 0 0;
   position: fixed;
-  left: 0;
+  left: 0%;
   top: 0;
   width: 100%;
   height: 100vh;
@@ -2325,9 +2324,9 @@ button {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  -webkit-transform: translate(300%, 0%);
-      -ms-transform: translate(300%, 0%);
-          transform: translate(300%, 0%);
+  -webkit-transform: translate(50%, 0%);
+      -ms-transform: translate(50%, 0%);
+          transform: translate(50%, 0%);
 }
 
 .menu__ul.active {

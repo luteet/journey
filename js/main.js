@@ -98,7 +98,7 @@ $(function () {
     function screenSize() {
         if ($(window).width() <= 767) {
             $(header_social).appendTo('.header__top--container');
-            $(menu_list).fadeOut(0);
+            $(menu_list);
             scollBarWidthFunc();
 
             /* phone_btn_check = true;
@@ -143,7 +143,7 @@ $(function () {
 
     function menuFunc() {
             $(burger).toggleClass('active');
-            $(menu_list).fadeIn(0).toggleClass('active');
+            $(menu_list).toggleClass('active');
             if(burger.hasClass('active')) {
                 $('body').css('padding', '0 ' + scrollBarWidth + 'px ' + '0 0');
                 $('body').css('overflow-y', 'hidden');
