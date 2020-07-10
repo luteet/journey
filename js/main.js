@@ -146,12 +146,12 @@ $(function () {
             $(menu_list).fadeIn(0).toggleClass('active');
             if(burger.hasClass('active')) {
                 $('body').css('padding', '0 ' + scrollBarWidth + 'px ' + '0 0');
-                $('body').css('overflow', 'hidden');
+                $('body').css('overflow-y', 'hidden');
                 /* $(bg).fadeIn(500); */
             }
             else {
                 $('body').css('padding', '0');
-                $('body').css('overflow', 'scroll');
+                $('body').css('overflow-y', 'scroll');
                 /* $(bg).fadeOut(0); */
             }
             $('body').toggleClass('lock');
