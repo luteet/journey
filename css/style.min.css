@@ -3234,19 +3234,6 @@ button {
     font-size: 18px;
   }
 
-  .menu__ul {
-    -webkit-transform: translate(200%, 0%);
-        -ms-transform: translate(200%, 0%);
-            transform: translate(200%, 0%);
-    width: 50%;
-  }
-
-  .menu__ul.active {
-    -webkit-transform: translate(100%, 0%);
-        -ms-transform: translate(100%, 0%);
-            transform: translate(100%, 0%);
-  }
-
   .about__content--body {
     min-width: 320px;
   }
