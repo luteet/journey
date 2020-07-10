@@ -2159,6 +2159,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
           transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
+body {
+  overflow: hidden;
+}
+
 body.lock {
   overflow: hidden;
   height: 100%;

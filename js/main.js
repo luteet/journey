@@ -141,9 +141,6 @@ $(function () {
         screenSize()
     });
 
-    
-    
-
     function menuFunc() {
             $(burger).toggleClass('active');
             $(menu_list).fadeIn(0).toggleClass('active');
@@ -163,7 +160,7 @@ $(function () {
         $(burger).on('click', function () {
             menuFunc()
         });
-        $/* (bg).on('click', function(){
+        /* $(bg).on('click', function(){
             menuFunc()
         }); */
 
