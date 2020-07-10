@@ -74,7 +74,7 @@ $(function () {
         menu_btn = $('.menu__btn'),
         header_top = $('.header__top'),
         header_social = $('.header__top--social'),
-        bg = $('.bg-menu'),
+        /* bg = $('.bg-menu'), */
         scrollBarWidth,
         burger = $('.menu__burger');
 
@@ -149,11 +149,13 @@ $(function () {
             $(menu_list).fadeIn(0).toggleClass('active');
             if(burger.hasClass('active')) {
                 $('body, .header__top').css('transition', 'all 0s ease').css('padding', '0 ' + scrollBarWidth + 'px ' + '0 0');
-                $(bg).fadeIn(500);
+                $('body').css('overflow', 'hidden');
+                /* $(bg).fadeIn(500); */
             }
             else {
                 $('body, .header__top').css('padding', '0');
-                $(bg).fadeOut(0);
+                $('body').css('overflow', 'scroll');
+                /* $(bg).fadeOut(0); */
             }
             $('body').toggleClass('lock');
     }
@@ -161,9 +163,9 @@ $(function () {
         $(burger).on('click', function () {
             menuFunc()
         });
-        $(bg).on('click', function(){
+        $/* (bg).on('click', function(){
             menuFunc()
-        });
+        }); */
 
     function menuBtnScroll(settings) {
 
