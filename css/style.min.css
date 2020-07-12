@@ -2185,18 +2185,33 @@ button {
 }
 
 .container {
+  position: relative;
   max-width: 1470px;
   padding: 0 15px;
   margin: 0 auto;
+  width: 100%;
+  z-index: 2;
 }
 
 .section-padding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 70px 0;
+  min-height: 100vh;
 }
 
 .title {
   font-family: "Playfair Display",serif;
   font-size: 50px;
+  margin: 0 0 25px 0;
 }
 
 .text {
@@ -2855,8 +2870,10 @@ button {
 }
 
 .gallery__type--4 {
+  overflow: hidden;
   margin: 10% auto;
   width: 60%;
+  height: auto;
   border: 10px solid #fff;
 }
 
@@ -2876,11 +2893,6 @@ button {
 
 .services {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 
 .services__container {
@@ -2919,7 +2931,31 @@ button {
   margin: 0 0 25px 0;
 }
 
+.services__text {
+  margin: 0 0 50px 0;
+}
+
+.services__btn {
+  text-align: center;
+}
+
+.services__btn .btn {
+  display: inline-block;
+  padding: 15px 50px;
+  border-color: #fff;
+  color: #fff;
+}
+
+.services__btn .btn:hover:before {
+  border-color: #fff;
+}
+
+.services__btn .btn:hover:after {
+  border-color: #fff;
+}
+
 .services__images {
+  display: none;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 35%;
           flex: 0 1 35%;
@@ -2950,6 +2986,105 @@ button {
   width: 200px;
   height: 200px;
   margin: 5px;
+}
+
+.team {
+  color: #fff;
+}
+
+.team__title {
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 0 0 15px;
+}
+
+.team__list--elem {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: left;
+      align-self: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.team__list--elem:not(:last-child) {
+  margin: 0 0 70px 0;
+}
+
+.team__list--left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  margin: 0 auto 50px auto;
+}
+
+.team__list--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  height: 100%;
+  -ms-flex: 0 1 100%;
+      flex: 0 1 100%;
+  margin: 0 auto;
+}
+
+.team__list--text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  margin: 0 0 20px 0;
+}
+
+.team__list--social {
+  height: 50px;
+}
+
+.team__list--social svg {
+  fill: #fff;
+}
+
+.team__list--image {
+  width: 300px;
+  margin: 0 0 17px 0;
+}
+
+.team__list--image:before {
+  -webkit-transform: translate(-5%, 5%);
+      -ms-transform: translate(-5%, 5%);
+          transform: translate(-5%, 5%);
+  height: 110%;
+  width: 90%;
+}
+
+.team__list--image img {
+  width: 100%;
+}
+
+@media (min-width: 400px) {
+  .services__images {
+    display: block;
+  }
 }
 
 @media (min-width: 600px) {
@@ -3126,6 +3261,54 @@ button {
 
   .gallery__type--6 {
     margin: 0;
+  }
+
+  .team__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+
+  .team__list--left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+    margin: 0 50px 0 0;
+  }
+
+  .team__list--right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
+    margin: auto 0;
+  }
+
+  .team__list--social {
+    height: 20px;
+  }
+
+  .team__list--social svg {
+    fill: #fff;
+  }
+}
+
+@media (min-width: 900px) {
+  .team__list--elem {
+    width: 80%;
+  }
+
+  .team__list--elem:nth-child(2n) {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+
+  .team__list--elem:nth-child(3n) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+
+  .team__list--elem:not(:last-child) {
+    margin: 0 0 50px 0;
   }
 }
 
@@ -3353,6 +3536,15 @@ button {
 
   .services__info {
     padding: 0 25px 0 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .services__info {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    padding-right: 0;
   }
 }
 
