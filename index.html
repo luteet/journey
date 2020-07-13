@@ -1,572 +1,1 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    <title>Путешествие</title>
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
-    <!-- v0.0.3 -->
-    <div class="wrapper">
-        <!-- <div class="bg-menu"></div> -->
-        <ul class="parallax__box parallax__header--box" data-limit-y="50">
-            <li data-depth="0.02" class="sky-li">
-                <div data-speed="1000" class="parallax-elem sky-bg"></div>
-            </li>
-            <!-- <li><div data-speed="50" class="parallax-elem cloud-1"></div></li> -->
-            <li data-depth="0.07" class="mountains-li">
-                <div data-speed="300" class="parallax-elem mountains-bg"></div>
-            </li>
-            <li data-depth="0.45" class="man-li">
-                <div data-speed="60" class="parallax-elem man-bg"></div>
-            </li>
-        </ul>
-        <div class="header__top" data-hh-class="black" data-hh-color="transparent">
-            <div class="header__top--container container">
-                <div class="header__top--logo logo-body">
-                    <a href="#" class="logo-link">
-                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%"
-                            viewBox="0 0 914.000000 623.000000" preserveAspectRatio="xMidYMid meet">
-                            <g transform="translate(0.000000,623.000000) scale(0.100000,-0.100000)" stroke="none">
-                                <path d="M3485 6192 c-39 -24 -88 -80 -140 -162 -23 -36 -504 -864 -1067
-                        -1840 -564 -976 -1287 -2229 -1608 -2785 -321 -556 -597 -1039 -613 -1075 -21
-                        -45 -31 -86 -35 -135 -4 -65 -2 -73 22 -102 14 -17 48 -39 74 -50 45 -17 202
-                        -18 4431 -21 3089 -1 4395 1 4423 9 50 13 123 80 139 126 6 19 9 63 7 96 -4
-                        61 -14 80 -537 992 -893 1556 -1544 2673 -1600 2745 -48 61 -95 81 -178 78
-                        -128 -6 -108 21 -498 -651 -188 -323 -353 -599 -366 -614 -76 -82 -214 -81
-                        -290 3 -15 16 -181 297 -369 624 -926 1606 -1456 2522 -1497 2585 -64 97 -109
-                        151 -148 175 -41 25 -110 26 -150 2z m161 -801 c63 -29 -5 81 749 -1216 208
-                        -357 397 -688 420 -735 79 -156 80 -206 5 -318 -82 -122 -162 -172 -254 -158
-                        -56 9 -53 6 -431 325 -165 139 -313 260 -330 269 -38 19 -130 21 -174 2 -19
-                        -7 -140 -103 -270 -213 -130 -110 -254 -208 -276 -218 -53 -25 -100 -24 -156
-                        4 -52 24 -412 342 -449 395 -34 48 -39 135 -12 188 53 103 926 1612 945 1632
-                        56 61 154 79 233 43z m3247 -1835 c18 -7 46 -27 62 -43 41 -41 468 -776 659
-                        -1134 62 -116 67 -149 37 -214 -44 -96 -159 -141 -256 -101 -19 8 -106 73
-                        -192 144 -87 71 -174 137 -193 147 -37 19 -115 25 -162 12 -15 -4 -84 -53
-                        -154 -108 -164 -131 -186 -143 -248 -143 -72 0 -115 26 -238 146 -121 117
-                        -139 152 -119 235 11 44 545 968 584 1010 50 56 151 78 220 49z" />
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <nav class="header__top--menu menu">
-                    <button class="header__top--burger menu__burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <ul class="menu__ul">
-                        <li class="menu__ul--li"><button class="menu__btn" data-scroll="#test">главная</button></li>
-                        <li class="menu__ul--li"><button class="menu__btn">button</button></li>
-                        <li class="menu__ul--li"><button class="menu__btn">button</button></li>
-                        <li class="menu__ul--li"><button class="menu__btn">button</button></li>
-                        <li class="menu__ul--li"><button class="menu__btn">button</button></li>
-                    </ul>
-                    <div class="header__top--social social">
-                        <a href="#" class="social__btn">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                viewBox="0 0 384 448">
-                                <g id="icomoon-ignore">
-                                </g>
-                                <path
-                                    d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                </path>
-                            </svg></a>
-                        <a href="#" class="social__btn">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                viewBox="0 0 384 448">
-                                <g id="icomoon-ignore">
-                                </g>
-                                <path
-                                    d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                </path>
-                            </svg></a>
-                        <a href="#" class="social__btn">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                viewBox="0 0 384 448">
-                                <title></title>
-                                <g id="icomoon-ignore">
-                                </g>
-                                <path
-                                    d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">
-                                </path>
-                            </svg></a>
-                    </div>
-                    <span class="menu__line"></span>
-                </nav>
-            </div>
-        </div>
-        <header class="header hh-color" data-hh-class="black" data-hh-color="#ffffff">
-
-            <div class="header__content">
-                <div class="header__content--container container">
-                    <div class="header__content--block">
-                        <div class="header__content--subtitle subtitle">
-                            Lorem ipsum dolor, sit amet consectetur
-                        </div>
-                        <h1 class="header__content--title title-h1">
-                            Путешествуй вместе с нами
-                        </h1>
-                        <button class="header__content--btn btn">
-                            подробности
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <section class="about section-padding webp-bg hh-color eclipse-bg" data-hh-class="white" data-hh-color="#253133"
-            data-notwebp="img/about-bg.jpg" style="background-image: url(img/about-bg.webp);">
-            <div class="about__container container">
-                <div class="about__body ">
-                    <div class="about__image">
-                        <div class="about__image--body border-elem">
-                            <ul class="parallax__box parallax__about--box">
-                                <li data-depth="0.05">
-                                    <div class="parallax-elem nature-bg"></div>
-                                </li>
-                                <li data-depth="0.45">
-                                    <div class="parallax-elem leaves-bg"></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="about__content">
-                        <div class="about__content--body text-body">
-                            <h2 class="about__content--title title">
-                                О нас
-                            </h2>
-                            <div class="about__content--text text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Animi accusamus quidem inventore consequuntur ipsa non
-                                    consequatur voluptatibus, quia dicta vero? Minus, laborum ex!
-                                    Quam animi voluptas consequatur dolore ab quo!Quibusdam, ut
-                                    temporibus optio dicta exercitationem, quis velit praesentium
-                                    debitis asperiores cupiditate quod voluptate ratione neque
-                                    veritatis omnis porro molestiae labore ducimus facere rerum
-                                    perspiciatis soluta cum fugit! Illum, voluptate?</p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Magnam, expedita consequuntur. Tempore quasi eligendi et
-                                    corporis fuga nesciunt iusto ullam eum, ipsum minus
-                                    necessitatibus ad neque ducimus quidem, maiores dolore?</p>
-                                <button class="about__content--btn btn">
-                                    узнать больше
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="gallery section-padding webp-bg hh-color eclipse-bg" data-hh-class="white"
-            data-hh-color="#080B05" data-notwebp="img/gallery-bg.jpg"
-            style="background-image: url(img/gallery-bg.webp);">
-            <div class="gallery__container container">
-                <div class="gallery__body">
-                    <div class="gallery__column gallery__column--left">
-                        <div class="gallery__info text-body">
-                            <div class="gallery__title title">
-                                Галерея
-                            </div>
-                            <div class="gallery__info--text text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt obcaecati eaque,
-                                assumenda doloremque soluta reiciendis, sequi inventore quas quasi fuga laudantium eum
-                                accusantium nihil. Ut ratione hic excepturi totam culpa!
-                            </div>
-                        </div>
-                        <div class="gallery__item gallery__type--2">
-                            <a href="img/gallery/gallery-item-5.jpg" class="webp-href"
-                                data-notwebp="img/gallery/gallery-item-5.jpg"><img class="image-gallery"
-                                    src="img/gallery/gallery-item-5-min.jpg" alt=""></a>
-                        </div>
-                        <div class="gallery__item gallery__type--4">
-                            <a href="img/gallery/gallery-item-3.webp" class="webp-href"
-                                data-notwebp="img/gallery/gallery-item-3.jpg"><img class="image-gallery"
-                                    src="img/gallery/gallery-item-3-min.jpg" alt=""></a>
-                        </div>
-                        <div class="gallery__item gallery__type--6">
-                            <a href="img/gallery/gallery-item-6.jpg" class="webp-href"
-                                data-notwebp="img/gallery/gallery-item-6.jpg"><img class="image-gallery"
-                                    src="img/gallery/gallery-item-6-min.jpg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="gallery__column gallery__column--right">
-                        <div class="gallery__item gallery__type--1 border-elem">
-                            <a href="img/gallery/gallery-item-1.webp" class="webp-href"
-                                data-notwebp="img/gallery/gallery-item-1.jpg"><img class="image-gallery"
-                                    src="img/gallery/gallery-item-1-min.jpg" alt=""></a>
-                        </div>
-                        <div class="gallery__item gallery__type--3 border-elem">
-                            <a href="img/gallery/gallery-item-7.webp" class="webp-href"
-                                data-notwebp="img/gallery/gallery-item-7.jpg"><img class="image-gallery"
-                                    src="img/gallery/gallery-item-7-min.jpg" alt=""></a>
-                        </div>
-
-                        <div class="gallery__item gallery__type--5">
-                            <a href="img/gallery/gallery-item-4.webp" class="webp-href"
-                                data-notwebp="img/gallery/gallery-item-4.jpg"><img class="image-gallery"
-                                    src="img/gallery/gallery-item-4-min.jpg" alt=""></a>
-                        </div>
-                        <div class="gallery__btn border-elem">
-                            <a href="#" class="btn">
-                                узнать больше
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="services section-padding webp-bg hh-color eclipse-bg" data-hh-class="white"
-            data-hh-color="#023e8a" data-notwebp="img/services-bg.jpg"
-            style="background-image: url(img/services-bg.webp);">
-            <div class="services__container container">
-                <div class="services__body">
-                    <div class="services__info">
-                        <div class="services__title title">
-                            Lorem, ipsum dolor.
-                        </div>
-                        <div class="services__text text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum iusto labore ratione aliquam
-                            asperiores fugiat hic explicabo adipisci ducimus, natus quam ut saepe sapiente? Totam,
-                            tempora! Rem nesciunt tempore nisi!Molestias, quae ut corporis quasi veniam illo voluptates
-                            debitis facere sequi aliquid mollitia quia iure tempore, explicabo qui ipsa maxime
-                            accusantium doloremque! Tenetur perspiciatis ex iusto laborum qui saepe ea.
-                        </div>
-                        <div class="services__btn">
-                            <a href="#" class="btn">Перейти</a>
-                        </div>
-                    </div>
-                    <div class="services__images">
-                        <div class="services__images--body border-elem">
-                            <div class="services__images--item webp-bg" data-notwebp="img/services/image-1.jpg"
-                                style="background-image: url(img/services/image-1.webp);"></div>
-                            <div class="services__images--item webp-bg" data-notwebp="img/services/image-2.jpg"
-                                style="background-image: url(img/services/image-2.webp);"></div>
-                            <div class="services__images--item webp-bg" data-notwebp="img/services/image-3.jpg"
-                                style="background-image: url(img/services/image-3.webp);"></div>
-                            <div class="services__images--item webp-bg" data-notwebp="img/services/image-4.jpg"
-                                style="background-image: url(img/services/image-4.webp);"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="team section-padding webp-bg hh-color eclipse-bg" data-hh-class="black" data-hh-color="#D69371"
-            data-notwebp="img/team-bg.jpg" style="background-image: url(img/team-bg.webp);">
-            <div class="team__container container">
-                <div class="team__body">
-                    <div class="team__title title">
-                        Наша команда
-                    </div>
-                    <div class="team__list">
-                        <div class="team__list--elem">
-                            <div class="team__list--left">
-                                <div class="team__list--image border-elem">
-                                    <img src="img/team/team-1.jpg" alt="">
-                                </div>
-                                <div class="team__list--name subtitle">
-                                    Имя Фамилия
-                                </div>
-                            </div>
-                            <div class="team__list--right">
-                                <div class="team__list--text subtitle">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure laboriosam
-                                    consequatur obcaecati distinctio voluptatum facilis quibusdam quasi ab repellat quas
-                                    rem, natus nesciunt blanditiis quidem cum exercitationem in! Eum, omnis.
-                                </div>
-                                <div class="team__list--social social">
-                                    <a href="#" class="social__btn">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                            viewBox="0 0 384 448">
-                                            <g id="icomoon-ignore">
-                                            </g>
-                                            <path
-                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                            </path>
-                                        </svg></a>
-                                    <a href="#" class="social__btn">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                            viewBox="0 0 384 448">
-                                            <g id="icomoon-ignore">
-                                            </g>
-                                            <path
-                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                            </path>
-                                        </svg></a>
-                                    <a href="#" class="social__btn">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                            viewBox="0 0 384 448">
-                                            <title></title>
-                                            <g id="icomoon-ignore">
-                                            </g>
-                                            <path
-                                                d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">
-                                            </path>
-                                        </svg></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team__list--elem">
-                            <div class="team__list--left">
-                                <div class="team__list--image border-elem">
-                                    <img src="img/team/team-2.jpg" alt="">
-                                </div>
-                                <div class="team__list--name subtitle">
-                                    Имя Фамилия
-                                </div>
-                            </div>
-                            <div class="team__list--right">
-                                <div class="team__list--text subtitle">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure laboriosam
-                                    consequatur obcaecati distinctio voluptatum facilis quibusdam quasi ab repellat quas
-                                    rem, natus nesciunt blanditiis quidem cum exercitationem in! Eum, omnis.
-                                </div>
-                                <div class="team__list--social social">
-                                    <a href="#" class="social__btn">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                            viewBox="0 0 384 448">
-                                            <g id="icomoon-ignore">
-                                            </g>
-                                            <path
-                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                            </path>
-                                        </svg></a>
-                                    <a href="#" class="social__btn">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                            viewBox="0 0 384 448">
-                                            <g id="icomoon-ignore">
-                                            </g>
-                                            <path
-                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                            </path>
-                                        </svg></a>
-                                    <a href="#" class="social__btn">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                            viewBox="0 0 384 448">
-                                            <title></title>
-                                            <g id="icomoon-ignore">
-                                            </g>
-                                            <path
-                                                d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">
-                                            </path>
-                                        </svg></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team__list--elem">
-                            <div class="team__list--left">
-                                <div class="team__list--image border-elem">
-                                    <img src="img/team/team-3.jpg" alt="">
-                                </div>
-                                <div class="team__list--name subtitle">
-                                    Имя Фамилия
-                                </div>
-                            </div>
-                            <div class="team__list--right">
-                                <div class="team__list--text subtitle">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure laboriosam
-                                    consequatur obcaecati distinctio voluptatum facilis quibusdam quasi ab repellat quas
-                                    rem, natus nesciunt blanditiis quidem cum exercitationem in! Eum, omnis.
-                                </div>
-                                <div class="team__list--social social">
-                                    <a href="#" class="social__btn">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                            viewBox="0 0 384 448">
-                                            <g id="icomoon-ignore">
-                                            </g>
-                                            <path
-                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                            </path>
-                                        </svg></a>
-                                    <a href="#" class="social__btn">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                            viewBox="0 0 384 448">
-                                            <g id="icomoon-ignore">
-                                            </g>
-                                            <path
-                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                            </path>
-                                        </svg></a>
-                                    <a href="#" class="social__btn">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                                            viewBox="0 0 384 448">
-                                            <title></title>
-                                            <g id="icomoon-ignore">
-                                            </g>
-                                            <path
-                                                d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">
-                                            </path>
-                                        </svg></a>
-                                </div>
-                                <div class="team__title title">
-                                    Наша команда
-                                </div>
-                                <div class="team__list">
-                                    <div class="team__list--elem">
-                                        <div class="team__list--left">
-                                            <div class="team__list--image border-elem">
-                                                <img src="img/team/team-1.jpg" alt="">
-                                            </div>
-                                            <div class="team__list--name subtitle">
-                                                Имя Фамилия
-                                            </div>
-                                        </div>
-                                        <div class="team__list--right">
-                                            <div class="team__list--text subtitle">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
-                                                laboriosam consequatur obcaecati distinctio voluptatum facilis quibusdam
-                                                quasi ab repellat quas rem, natus nesciunt blanditiis quidem cum
-                                                exercitationem in! Eum, omnis.
-                                            </div>
-                                            <div class="team__list--social social">
-                                                <a href="#" class="social__btn">
-                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%"
-                                                        height="100%" viewBox="0 0 384 448">
-                                                        <g id="icomoon-ignore">
-                                                        </g>
-                                                        <path
-                                                            d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                                        </path>
-                                                    </svg></a>
-                                                <a href="#" class="social__btn">
-                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%"
-                                                        height="100%" viewBox="0 0 384 448">
-                                                        <g id="icomoon-ignore">
-                                                        </g>
-                                                        <path
-                                                            d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                                        </path>
-                                                    </svg></a>
-                                                <a href="#" class="social__btn">
-                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%"
-                                                        height="100%" viewBox="0 0 384 448">
-                                                        <title></title>
-                                                        <g id="icomoon-ignore">
-                                                        </g>
-                                                        <path
-                                                            d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">
-                                                        </path>
-                                                    </svg></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team__list--elem">
-                                        <div class="team__list--left">
-                                            <div class="team__list--image border-elem">
-                                                <img src="img/team/team-2.jpg" alt="">
-                                            </div>
-                                            <div class="team__list--name subtitle">
-                                                Имя Фамилия
-                                            </div>
-                                        </div>
-                                        <div class="team__list--right">
-                                            <div class="team__list--text subtitle">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
-                                                laboriosam consequatur obcaecati distinctio voluptatum facilis quibusdam
-                                                quasi ab repellat quas rem, natus nesciunt blanditiis quidem cum
-                                                exercitationem in! Eum, omnis.
-                                            </div>
-                                            <div class="team__list--social social">
-                                                <a href="#" class="social__btn">
-                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%"
-                                                        height="100%" viewBox="0 0 384 448">
-                                                        <g id="icomoon-ignore">
-                                                        </g>
-                                                        <path
-                                                            d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                                        </path>
-                                                    </svg></a>
-                                                <a href="#" class="social__btn">
-                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%"
-                                                        height="100%" viewBox="0 0 384 448">
-                                                        <g id="icomoon-ignore">
-                                                        </g>
-                                                        <path
-                                                            d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                                        </path>
-                                                    </svg></a>
-                                                <a href="#" class="social__btn">
-                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%"
-                                                        height="100%" viewBox="0 0 384 448">
-                                                        <title></title>
-                                                        <g id="icomoon-ignore">
-                                                        </g>
-                                                        <path
-                                                            d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">
-                                                        </path>
-                                                    </svg></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team__list--elem">
-                                        <div class="team__list--left">
-                                            <div class="team__list--image border-elem">
-                                                <img src="img/team/team-3.jpg" alt="">
-                                            </div>
-                                            <div class="team__list--name subtitle">
-                                                Имя Фамилия
-                                            </div>
-                                        </div>
-                                        <div class="team__list--right">
-                                            <div class="team__list--text subtitle">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
-                                                laboriosam consequatur obcaecati distinctio voluptatum facilis quibusdam
-                                                quasi ab repellat quas rem, natus nesciunt blanditiis quidem cum
-                                                exercitationem in! Eum, omnis.
-                                            </div>
-                                            <div class="team__list--social social">
-                                                <a href="#" class="social__btn">
-                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%"
-                                                        height="100%" viewBox="0 0 384 448">
-                                                        <g id="icomoon-ignore">
-                                                        </g>
-                                                        <path
-                                                            d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                                        </path>
-                                                    </svg></a>
-                                                <a href="#" class="social__btn">
-                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%"
-                                                        height="100%" viewBox="0 0 384 448">
-                                                        <g id="icomoon-ignore">
-                                                        </g>
-                                                        <path
-                                                            d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">
-                                                        </path>
-                                                    </svg></a>
-                                                <a href="#" class="social__btn">
-                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%"
-                                                        height="100%" viewBox="0 0 384 448">
-                                                        <title></title>
-                                                        <g id="icomoon-ignore">
-                                                        </g>
-                                                        <path
-                                                            d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">
-                                                        </path>
-                                                    </svg></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/libs.min.js"></script>
-    <script src="js/hHeaderCustomer.min.js"></script>
-    <script src="js/main.js"></script>
-
-</body>
-
-</html>
+<!DOCTYPE html><html><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">    <title>Путешествие</title>    <link rel="stylesheet" href="css/style.min.css"></head><body>    <!-- v0.0.4 -->    <!-- <div class="bg-menu"></div> -->    <div class="wrapper">        <!-- <ul class="parallax__box parallax__header--box" data-limit-y="50">            <li data-depth="0.01" class="sky-li">                <div data-speed="1000" class="parallax-elem sky-bg" style="background-image: url(img/paralax/sky-parallax.webp)"></div>            </li>            <li data-depth="0.05" class="mountains-li">                <div data-speed="300" class="parallax-elem mountains-bg"></div>            </li>            <li data-depth="0.45" class="man-li">                <div data-speed="60" class="parallax-elem man-bg"></div>            </li>        </ul> -->        <div class="header__top" data-hh-class="black" data-hh-color="transparent">            <div class="header__top--container container">                <div class="header__top--logo logo-body">                    <a href="#" class="logo-link">                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%"                            viewBox="0 0 914.000000 623.000000" preserveAspectRatio="xMidYMid meet">                            <g transform="translate(0.000000,623.000000) scale(0.100000,-0.100000)" stroke="none">                                <path d="M3485 6192 c-39 -24 -88 -80 -140 -162 -23 -36 -504 -864 -1067                        -1840 -564 -976 -1287 -2229 -1608 -2785 -321 -556 -597 -1039 -613 -1075 -21                        -45 -31 -86 -35 -135 -4 -65 -2 -73 22 -102 14 -17 48 -39 74 -50 45 -17 202                        -18 4431 -21 3089 -1 4395 1 4423 9 50 13 123 80 139 126 6 19 9 63 7 96 -4                        61 -14 80 -537 992 -893 1556 -1544 2673 -1600 2745 -48 61 -95 81 -178 78                        -128 -6 -108 21 -498 -651 -188 -323 -353 -599 -366 -614 -76 -82 -214 -81                        -290 3 -15 16 -181 297 -369 624 -926 1606 -1456 2522 -1497 2585 -64 97 -109                        151 -148 175 -41 25 -110 26 -150 2z m161 -801 c63 -29 -5 81 749 -1216 208                        -357 397 -688 420 -735 79 -156 80 -206 5 -318 -82 -122 -162 -172 -254 -158                        -56 9 -53 6 -431 325 -165 139 -313 260 -330 269 -38 19 -130 21 -174 2 -19                        -7 -140 -103 -270 -213 -130 -110 -254 -208 -276 -218 -53 -25 -100 -24 -156                        4 -52 24 -412 342 -449 395 -34 48 -39 135 -12 188 53 103 926 1612 945 1632                        56 61 154 79 233 43z m3247 -1835 c18 -7 46 -27 62 -43 41 -41 468 -776 659                        -1134 62 -116 67 -149 37 -214 -44 -96 -159 -141 -256 -101 -19 8 -106 73                        -192 144 -87 71 -174 137 -193 147 -37 19 -115 25 -162 12 -15 -4 -84 -53                        -154 -108 -164 -131 -186 -143 -248 -143 -72 0 -115 26 -238 146 -121 117                        -139 152 -119 235 11 44 545 968 584 1010 50 56 151 78 220 49z" />                            </g>                        </svg>                    </a>                </div>                <nav class="header__top--menu menu">                    <button class="header__top--burger menu__burger">                        <span></span>                        <span></span>                        <span></span>                    </button>                    <ul class="menu__ul">                        <li class="menu__ul--li"><button class="menu__btn" data-scroll="#test">главная</button></li>                        <li class="menu__ul--li"><button class="menu__btn">button</button></li>                        <li class="menu__ul--li"><button class="menu__btn">button</button></li>                        <li class="menu__ul--li"><button class="menu__btn">button</button></li>                        <li class="menu__ul--li"><button class="menu__btn">button</button></li>                    </ul>                    <div class="header__top--social social">                        <a href="#" class="social__btn">                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                viewBox="0 0 384 448">                                <g id="icomoon-ignore">                                </g>                                <path                                    d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">                                </path>                            </svg></a>                        <a href="#" class="social__btn">                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                viewBox="0 0 384 448">                                <g id="icomoon-ignore">                                </g>                                <path                                    d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">                                </path>                            </svg></a>                        <a href="#" class="social__btn">                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                viewBox="0 0 384 448">                                <title></title>                                <g id="icomoon-ignore">                                </g>                                <path                                    d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">                                </path>                            </svg></a>                    </div>                </nav>            </div>        </div>        <header class="header webp-bg hh-color" data-notwebp="img/header-bg.jpg" data-hh-class="black" data-hh-color="#EEF2F3" style="background-image: url(img/header-bg.webp);">            <div class="header__content">                <div class="header__content--container container">                    <div class="header__content--block">                        <div class="header__content--subtitle subtitle">                            Lorem ipsum dolor, sit amet consectetur                        </div>                        <h1 class="header__content--title title-h1">                            Путешествуй вместе с нами                        </h1>                        <button class="header__content--btn btn">                            подробности                        </button>                    </div>                </div>            </div>        </header>        <section class="about section-padding webp-bg hh-color eclipse-bg" data-hh-class="white" data-hh-color="#253133"            data-notwebp="img/about-bg.jpg" style="background-image: url(img/about-bg.webp);">            <div class="about__container container">                <div class="about__body ">                    <div class="about__image">                        <div class="about__image--body border-elem">                            <ul class="parallax__box parallax__about--box">                                <li data-depth="0.05">                                    <div class="parallax-elem nature-bg"></div>                                </li>                                <li data-depth="0.45">                                    <div class="parallax-elem leaves-bg"></div>                                </li>                            </ul>                        </div>                    </div>                    <div class="about__content">                        <div class="about__content--body text-body">                            <h2 class="about__content--title title">                                О нас                            </h2>                            <div class="about__content--text text">                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.                                    Animi accusamus quidem inventore consequuntur ipsa non                                    consequatur voluptatibus, quia dicta vero? Minus, laborum ex!                                    Quam animi voluptas consequatur dolore ab quo!Quibusdam, ut                                    temporibus optio dicta exercitationem, quis velit praesentium                                    debitis asperiores cupiditate quod voluptate ratione neque                                    veritatis omnis porro molestiae labore ducimus facere rerum                                    perspiciatis soluta cum fugit! Illum, voluptate?</p>                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.                                    Magnam, expedita consequuntur. Tempore quasi eligendi et                                    corporis fuga nesciunt iusto ullam eum, ipsum minus                                    necessitatibus ad neque ducimus quidem, maiores dolore?</p>                                <button class="about__content--btn btn">                                    узнать больше                                </button>                            </div>                        </div>                    </div>                </div>            </div>        </section>        <section class="services section-padding webp-bg hh-color eclipse-bg" data-hh-class="white"            data-hh-color="#023e8a" data-notwebp="img/services-bg.jpg"            style="background-image: url(img/services-bg.webp);">            <div class="services__container container">                <div class="services__body">                    <div class="services__info">                        <div class="services__title title">                            Lorem, ipsum dolor.                        </div>                        <div class="services__text text">                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum iusto labore ratione aliquam                            asperiores fugiat hic explicabo adipisci ducimus, natus quam ut saepe sapiente? Totam,                            tempora! Rem nesciunt tempore nisi!Molestias, quae ut corporis quasi veniam illo voluptates                            debitis facere sequi aliquid mollitia quia iure tempore, explicabo qui ipsa maxime                            accusantium doloremque! Tenetur perspiciatis ex iusto laborum qui saepe ea.                        </div>                        <div class="services__btn">                            <a href="#" class="btn">Перейти</a>                        </div>                    </div>                    <div class="services__images">                        <div class="services__images--body border-elem">                            <div class="services__images--item webp-bg" data-notwebp="img/services/image-1.jpg"                                style="background-image: url(img/services/image-1.webp);"></div>                            <div class="services__images--item webp-bg" data-notwebp="img/services/image-2.jpg"                                style="background-image: url(img/services/image-2.webp);"></div>                            <div class="services__images--item webp-bg" data-notwebp="img/services/image-3.jpg"                                style="background-image: url(img/services/image-3.webp);"></div>                            <div class="services__images--item webp-bg" data-notwebp="img/services/image-4.jpg"                                style="background-image: url(img/services/image-4.webp);"></div>                        </div>                    </div>                </div>            </div>        </section>        <section class="gallery section-padding webp-bg hh-color eclipse-bg" data-hh-class="white"            data-hh-color="#080B05" data-notwebp="img/gallery-bg.jpg"            style="background-image: url(img/gallery-bg.webp);">            <div class="gallery__container container">                <div class="gallery__body">                    <div class="gallery__column gallery__column--left">                        <div class="gallery__info text-body">                            <div class="gallery__title title">                                Галерея                            </div>                            <div class="gallery__info--text text">                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt obcaecati eaque,                                assumenda doloremque soluta reiciendis, sequi inventore quas quasi fuga laudantium eum                                accusantium nihil. Ut ratione hic excepturi totam culpa!                            </div>                        </div>                        <div class="gallery__item gallery__type--2">                            <a href="img/gallery/gallery-item-5.jpg" class="webp-href"                                data-notwebp="img/gallery/gallery-item-5.jpg">                                <picture><source srcset="img/gallery/gallery-item-5-min.webp" type="image/webp"><img class="image-gallery" src="img/gallery/gallery-item-5-min.jpg" alt=""></picture></a>                        </div>                        <div class="gallery__item gallery__type--4">                            <a href="img/gallery/gallery-item-3.webp" class="webp-href"                                data-notwebp="img/gallery/gallery-item-3.jpg"><picture><source srcset="img/gallery/gallery-item-3-min.webp" type="image/webp"><img class="image-gallery" src="img/gallery/gallery-item-3-min.jpg" alt=""></picture></a>                        </div>                        <div class="gallery__item gallery__type--6">                            <a href="img/gallery/gallery-item-6.jpg" class="webp-href"                                data-notwebp="img/gallery/gallery-item-6.jpg"><picture><source srcset="img/gallery/gallery-item-6-min.webp" type="image/webp"><img class="image-gallery" src="img/gallery/gallery-item-6-min.jpg" alt=""></picture></a>                        </div>                    </div>                    <div class="gallery__column gallery__column--right">                        <div class="gallery__item gallery__type--1 border-elem">                            <a href="img/gallery/gallery-item-1.webp" class="webp-href"                                data-notwebp="img/gallery/gallery-item-1.jpg"><picture><source srcset="img/gallery/gallery-item-1-min.webp" type="image/webp"><img class="image-gallery" src="img/gallery/gallery-item-1-min.jpg" alt=""></picture></a>                        </div>                        <div class="gallery__item gallery__type--3 border-elem">                            <a href="img/gallery/gallery-item-7.webp" class="webp-href"                                data-notwebp="img/gallery/gallery-item-7.jpg"><picture><source srcset="img/gallery/gallery-item-7-min.webp" type="image/webp"><img class="image-gallery" src="img/gallery/gallery-item-7-min.jpg" alt=""></picture></a>                        </div>                        <div class="gallery__item gallery__type--5">                            <a href="img/gallery/gallery-item-4.webp" class="webp-href"                                data-notwebp="img/gallery/gallery-item-4.jpg"><picture><source srcset="img/gallery/gallery-item-4-min.webp" type="image/webp"><img class="image-gallery" src="img/gallery/gallery-item-4-min.jpg" alt=""></picture></a>                        </div>                        <div class="gallery__btn border-elem">                            <a href="#" class="btn">                                узнать больше                            </a>                        </div>                    </div>                </div>            </div>        </section>        <section class="team section-padding webp-bg hh-color eclipse-bg" data-hh-class="black" data-hh-color="#D8E4E7"            data-notwebp="img/team-bg.jpg" style="background-image: url(img/team-bg.webp);">            <div class="team__container container">                <div class="team__body">                    <div class="team__title title">                        Наша команда                    </div>                    <div class="team__list">                        <div class="team__list--elem">                            <div class="team__list--left">                                <div class="team__list--image border-elem">                                    <picture><source srcset="img/team/team-1.webp" type="image/webp"><img src="img/team/team-1.jpg" alt=""></picture>                                </div>                                <div class="team__list--social social">                                    <a href="#" class="social__btn">                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                            viewBox="0 0 384 448">                                            <g id="icomoon-ignore">                                            </g>                                            <path                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">                                            </path>                                        </svg></a>                                    <a href="#" class="social__btn">                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                            viewBox="0 0 384 448">                                            <g id="icomoon-ignore">                                            </g>                                            <path                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">                                            </path>                                        </svg></a>                                    <a href="#" class="social__btn">                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                            viewBox="0 0 384 448">                                            <title></title>                                            <g id="icomoon-ignore">                                            </g>                                            <path                                                d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">                                            </path>                                        </svg></a>                                </div>                            </div>                            <div class="team__list--right">                                <div class="team__list--name subtitle">                                    Имя Фамилия                                </div>                                <div class="team__list--text subtitle">                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure laboriosam                                    consequatur obcaecati distinctio voluptatum facilis quibusdam quasi ab repellat quas                                    rem, natus nesciunt blanditiis quidem cum exercitationem in! Eum, omnis.                                </div>                            </div>                        </div>                        <div class="team__list--elem">                            <div class="team__list--left">                                <div class="team__list--image border-elem">                                    <picture><source srcset="img/team/team-2.webp" type="image/webp"><img src="img/team/team-2.jpg" alt=""></picture>                                </div>                                <div class="team__list--social social">                                    <a href="#" class="social__btn">                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                            viewBox="0 0 384 448">                                            <g id="icomoon-ignore">                                            </g>                                            <path                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">                                            </path>                                        </svg></a>                                    <a href="#" class="social__btn">                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                            viewBox="0 0 384 448">                                            <g id="icomoon-ignore">                                            </g>                                            <path                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">                                            </path>                                        </svg></a>                                    <a href="#" class="social__btn">                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                            viewBox="0 0 384 448">                                            <title></title>                                            <g id="icomoon-ignore">                                            </g>                                            <path                                                d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">                                            </path>                                        </svg></a>                                </div>                            </div>                            <div class="team__list--right">                                <div class="team__list--name subtitle">                                    Имя Фамилия                                </div>                                <div class="team__list--text subtitle">                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure laboriosam                                    consequatur obcaecati distinctio voluptatum facilis quibusdam quasi ab repellat quas                                    rem, natus nesciunt blanditiis quidem cum exercitationem in! Eum, omnis.                                </div>                            </div>                        </div>                        <div class="team__list--elem">                            <div class="team__list--left">                                <div class="team__list--image border-elem">                                    <picture><source srcset="img/team/team-3.webp" type="image/webp"><img src="img/team/team-3.jpg" alt=""></picture>                                </div>                                <div class="team__list--social social">                                    <a href="#" class="social__btn">                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                            viewBox="0 0 384 448">                                            <g id="icomoon-ignore">                                            </g>                                            <path                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-47v-148.75h49.75l7.5-58h-57.25v-37c0-16.75 4.5-28 28.75-28l30.5-0.25v-51.75c-5.25-0.75-23.5-2.25-44.5-2.25-44.25 0-74.75 27-74.75 76.5v42.75h-50v58h50v148.75h-133c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">                                            </path>                                        </svg></a>                                    <a href="#" class="social__btn">                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                            viewBox="0 0 384 448">                                            <g id="icomoon-ignore">                                            </g>                                            <path                                                d="M312 32c39.75 0 72 32.25 72 72v240c0 39.75-32.25 72-72 72h-181.25c8.25-11.75 21.75-32 27-52.5 0 0 2.25-8.5 13.25-52.25 6.75 12.75 26 23.75 46.5 23.75 61 0 102.5-55.75 102.5-130.25 0-56.25-47.75-108.75-120.25-108.75-90.25 0-135.75 64.75-135.75 118.75 0 32.5 12.5 61.5 39 72.5 4.25 1.75 8.25 0 9.5-4.75 0.75-3.25 2.75-11.75 3.75-15.25 1.25-4.75 0.75-6.5-2.75-10.5-7.5-9.25-12.5-20.75-12.5-37.5 0-48 36-90.75 93.5-90.75 51 0 79 31 79 72.75 0 54.75-24.25 101-60.25 101-19.75 0-34.75-16.5-30-36.75 5.75-24 16.75-50 16.75-67.25 0-15.5-8.25-28.5-25.5-28.5-20.25 0-36.5 21-36.5 49 0 0 0 18 6 30.25-20.75 88-24.5 103.5-24.5 103.5-5.5 23-3.25 49.75-1.75 63.5h-45.75c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240z">                                            </path>                                        </svg></a>                                    <a href="#" class="social__btn">                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"                                            viewBox="0 0 384 448">                                            <title></title>                                            <g id="icomoon-ignore">                                            </g>                                            <path                                                d="M320 152.5c-9.5 4.25-19.5 7-30.25 8.5 11-6.5 19.25-17 23.25-29.25-10.25 6-21.5 10.5-33.5 12.75-9.5-10.25-23.25-16.5-38.25-16.5-29 0-52.5 23.5-52.5 52.5 0 4 0.25 8.25 1.25 12-43.75-2.25-82.5-23-108.5-55-4.5 7.75-7.25 17-7.25 26.5 0 18.25 8.5 34.25 22.75 43.75-8.75-0.25-17-2.75-25-6.5v0.5c0 25.5 19.25 46.75 43.25 51.5-4.5 1.25-8 2-12.75 2-3.25 0-6.5-0.5-9.75-1 6.75 20.75 26 36 49 36.5-18 14-40.5 22.5-65.25 22.5-4.25 0-8.5-0.25-12.5-0.75 23.25 14.75 50.75 23.5 80.5 23.5 96.5 0 149.5-80 149.5-149.5 0-2.25 0-4.5-0.25-6.75 10.25-7.25 19.25-16.5 26.25-27.25zM384 104v240c0 39.75-32.25 72-72 72h-240c-39.75 0-72-32.25-72-72v-240c0-39.75 32.25-72 72-72h240c39.75 0 72 32.25 72 72z">                                            </path>                                        </svg></a>                                </div>                            </div>                            <div class="team__list--right">                                <div class="team__list--name subtitle">                                    Имя Фамилия                                </div>                                <div class="team__list--text subtitle">                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure laboriosam                                    consequatur obcaecati distinctio voluptatum facilis quibusdam quasi ab repellat quas                                    rem, natus nesciunt blanditiis quidem cum exercitationem in! Eum, omnis.                                </div>                            </div>                        </div>                    </div>                </div>            </div>        </section>            </div>    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    <script src="js/libs.min.js"></script>    <script src="js/hHeaderCustomer.min.js"></script>    <script src="js/main.js"></script></body></html>

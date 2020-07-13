@@ -53,13 +53,8 @@ $(function () {
             }
         });
 
-    let scene_1 = $('.parallax__header--box').get(0),
-    scene_2 = $('.parallax__about--box').get(0),
-    /* scene_3 = $('.parallax__gallery--box-1').get(0), */
-    parallaxInstance_1 = new Parallax(scene_1),
-    parallaxInstance_2 = new Parallax(scene_2);
-    /* parallaxInstance_3 = new Parallax(scene_3); */
-
+     let scene_1 = $('.parallax__about--box').get(0),
+         parallaxInstance_1 = new Parallax(scene_1);
     hHeaderCustomer({
         elemName: $('.header__top'),
         headerHider: false,
@@ -101,40 +96,15 @@ $(function () {
             $(menu_list);
             scollBarWidthFunc();
 
-            /* phone_btn_check = true;
-            $(phone_btn).appendTo($(menu_list)).css('display', 'block');
-            $(menu).css('display', 'none');
-            $(burger).removeClass('active'); */
-            $('.menu__ul--li').hover(
-                function () {
-                    return false;
-                    
-                },
-                function () {
-                    return false;
-                }
-            );
 
         }
         else if ($(window).width() > 767) {
             $(line_menu).css('left', btn_left + 'px').css('width', line_width + 'px').css('top', btn_top + 'px').css('opacity', '0');
             scollBarWidthFunc();
             $(header_social).appendTo(menu);
-            $('.menu__ul--li').hover(
-                function () {
-                    btn_left = $(this).children(menu_btn).offset().left;
-                    line_width = $(this).children(menu_btn).width();
-                    $(line_menu).css('width', line_width + 'px').css('left', btn_left + 'px').css('opacity', '1');
-                    
-                },
-                function () {
-                    btn_left = $(menu_btn[0]).offset().left,
-                    line_width = $(menu_btn[0]).width();
-                    $(line_menu).css('width', line_width + 'px').css('left', btn_left + 'px').css('opacity', '0');
-                });
-            
-        }
+           
     }
+}
     screenSize()
 
     $(window).resize(function () {
@@ -190,40 +160,9 @@ $(function () {
 
     }
 
-    
-
     menuBtnScroll({
         buttonsToScroll: $('.menu__btn'),
 
     })
-
-    /* function parallax() {
-
-        let distanceX,
-            distanceY
-            speedParallaxAnim = 0;
-
-        function moveElem(X, Y) {
-            $.each($('.parallax-elem'), function () {
-                speedParallaxAnim = $(this).data('speed');
-                $(this).css('transform', 'translate(' + X/speedParallaxAnim + 'px' + ', ' + Y/speedParallaxAnim + 'px' + ')' + ' scale(1.05)');
-                
-            });
-            
-            
-        }
-
-        $('body').on('mousemove', function(e) {
-            distanceX = e.clientX;
-            distanceY = e.clientY;
-            moveElem(distanceX, distanceY);
-            
-        });
-
-        
-    }
-    
-    parallax() */
-
     
 });
