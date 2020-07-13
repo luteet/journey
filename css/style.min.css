@@ -3771,3 +3771,158 @@ button {
     padding: 50px 0;
   }
 }
+@supports (-webkit-appearance:none){
+.cloud-1{background-image:url(../img/paralax/Cloud882.webp)}
+.sky-bg{background-image:url(../img/paralax/sky-parallax.webp)}
+.mountains-bg{background-image:url(../img/paralax/mountains-parallax.webp)}
+.man-bg{background-image:url(../img/paralax/men-parallax.webp)}
+.leaves-bg{background-image:url(../img/paralax/leaves.webp)}
+.nature-bg{background-image:url(../img/paralax/nature-about.webp)}
+.gallery-sky-bg{background-image:url(../img/paralax/gallery-sky-parallax.webp)}
+.gallery-mountains-2-bg{background-image:url(../img/paralax/gallery-mountains-2-parallax.webp)}
+.gallery-mountains-1-bg{background-image:url(../img/paralax/gallery-mountains-1-parallax.webp)}
+}
+
+ @media (min-width: 400px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (min-width: 600px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (min-width: 768px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (min-width: 900px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1550px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1336px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1024px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 950px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media all and (max-width: 900px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 769px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 768px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 600px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 500px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 400px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 320px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen{
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-height: 1080px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
