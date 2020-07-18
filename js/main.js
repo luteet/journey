@@ -4,10 +4,8 @@ $(function () {
         nextArrow: '<button class="slick-next slick-arrow" type="button"><img src="img/icons/arrow.svg"/></button > '
     }); */
 
-    let image_height = 0,
-        image_srcNotWebp,
+    let image_srcNotWebp,
         image_src_bg = '.webp-bg';
-        image_src_href = '.webp-href';
 
     function ThisIsWebP() {
         let def = $.Deferred(), crimg = new Image();
@@ -19,22 +17,20 @@ $(function () {
 
     ThisIsWebP().then(function () {
         $.each($(image_src_bg), function () {
+            return false;
         });
-        
-    }
-        , function () {
+    }, function () {
             $.each($(image_src_bg), function () {
                 image_srcNotWebp = $(this).data('notwebp');
-                $(this).css('background-image', 'url("' + image_srcNotWebp + '")');
-                
+                if($(this).is('a') == true) {
+                    $(this).attr('href', image_srcNotWebp);
+                }
+                else {
+                    $(this).css('background-image', 'url("' + image_srcNotWebp + '")');
+                }
             });
-            $.each($(image_src_href), function () {
-                image_srcNotWebp = $(this).data('notwebp');
-                $(this).attr('href', image_srcNotWebp);
-            });
-
         });
-
+        
         $('.gallery__item').magnificPopup({
             delegate: 'a',
             type: 'image',
@@ -53,8 +49,15 @@ $(function () {
             }
         });
 
-     let scene_1 = $('.parallax__about--box').get(0),
-         parallaxInstance_1 = new Parallax(scene_1);
+    let scene_1 = $('.parallax__header--box').get(0),
+        scene_2 = $('.parallax__about--box').get(0),
+        scene_3 = $('.parallax__services--box').get(0),
+        scene_4 = $('.parallax__gallery--box').get(0),
+        parallaxInstance_1 = new Parallax(scene_1),
+        parallaxInstance_2 = new Parallax(scene_2),
+        parallaxInstance_3 = new Parallax(scene_3),
+        parallaxInstance_4 = new Parallax(scene_4);
+
     hHeaderCustomer({
         elemName: $('.header__top'),
         headerHider: false,
@@ -71,15 +74,11 @@ $(function () {
         header_social = $('.header__top--social'),
         /* bg = $('.bg-menu'), */
         scrollBarWidth,
-        burger = $('.menu__burger');
+        burger = $('.menu__burger'),
+        contacts = $('.contacts'),
+        headerScroll = $('.header__top').offset().top;
 
-    
 
-        let line_menu = $('.menu__line'),
-            btn_left = $(menu_btn[0]).offset().left,
-            btn_top = $(header_top).height() - $(line_menu).height(),
-            line_width = $(menu_btn[0]).width(),
-            headerScroll = $('.header__top').offset().top;
 
             function scollBarWidthFunc() {
                 scrollBarWidth = $('body').width();
@@ -92,16 +91,15 @@ $(function () {
             /* $('.man-li').data().depth = 0.20; */
     function screenSize() {
         if ($(window).width() <= 767) {
-            $(header_social).appendTo('.header__top--container');
+            $(contacts).appendTo(menu_list);
             $(menu_list);
             scollBarWidthFunc();
 
 
         }
         else if ($(window).width() > 767) {
-            $(line_menu).css('left', btn_left + 'px').css('width', line_width + 'px').css('top', btn_top + 'px').css('opacity', '0');
             scollBarWidthFunc();
-            $(header_social).appendTo(menu);
+            $(contacts).appendTo(menu);
            
     }
 }
@@ -165,4 +163,6 @@ $(function () {
 
     })
     
+    AOS.init();
+
 });
