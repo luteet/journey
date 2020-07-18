@@ -2530,7 +2530,7 @@ button {
 .parallax__gallery--box {
   position: absolute;
   overflow: hidden;
-  z-index: 10;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -2629,10 +2629,10 @@ button {
           transform: translate3d(0px, 0px, 30px);
   -webkit-animation: main_parallax_elem-2 0.5s ease-out 1.7s 1 normal forwards;
           animation: main_parallax_elem-2 0.5s ease-out 1.7s 1 normal forwards;
-  width: 120%;
+  width: 125%;
   height: 100%;
   top: 35%;
-  left: 0%;
+  left: -15%;
 }
 
 .leaves-bg {
@@ -2658,15 +2658,15 @@ button {
 }
 
 .board-parallax {
-  left: -2%;
-  top: 70%;
-  width: 100px;
-  height: 140px;
+  left: 10%;
+  top: 65%;
+  width: 110px;
+  height: 150px;
 }
 
 .hammack-parallax {
   left: 85%;
-  top: -5%;
+  top: 5%;
   width: 200px;
   height: 175px;
 }
@@ -2683,11 +2683,13 @@ button {
 }
 
 .leaves_elem-1 {
-  display: none;
+  top: 5%;
+  left: 5%;
 }
 
 .leaves_elem-2 {
-  display: none;
+  top: 7%;
+  right: 5%;
 }
 
 .leaves_elem-3 {
@@ -2923,6 +2925,20 @@ button {
   margin: 0 0 25px 0;
 }
 
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
 .services__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3014,11 +3030,6 @@ button {
   width: 200px;
   height: 200px;
   margin: 5px;
-}
-
-.gallery {
-  min-height: 100vh;
-  margin: -50px 0 0 0;
 }
 
 .gallery__container {
@@ -3440,21 +3451,13 @@ button {
     display: none;
   }
 
-  .leaves_elem-1 {
-    top: 5%;
-    left: 5%;
-    display: block;
-  }
-
-  .leaves_elem-2 {
-    top: 7%;
-    right: 5%;
-    display: block;
+  .parallax__gallery--box {
+    z-index: 10;
   }
 
   .leaves_elem-7 {
     top: 95%;
-    right: 20%;
+    left: 80%;
   }
 
   .header__top--contacts {
@@ -4085,5 +4088,11 @@ button {
 @media (max-height: 1080px) {
   .about__content {
     padding: 50px 0;
+  }
+}
+
+@media (min-height: 1080px) {
+  .services-parallax__container {
+    min-height: 1080px;
   }
 }
