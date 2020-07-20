@@ -2268,6 +2268,24 @@ button {
   padding: 0 0 1px 0;
 }
 
+.side-cut {
+  position: relative;
+}
+
+.side-cut:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 110%;
+  height: 110%;
+  background-color: #fff;
+  -webkit-transform: rotate(-1deg) translate(-5%, -5%);
+      -ms-transform: rotate(-1deg) translate(-5%, -5%);
+          transform: rotate(-1deg) translate(-5%, -5%);
+  z-index: 2;
+}
+
 .section-padding {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3271,6 +3289,95 @@ button {
   z-index: 2;
   max-width: 300px;
   width: 100%;
+}
+
+.reviews {
+  min-height: 0;
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews__title {
+  margin-bottom: 50px;
+}
+
+.reviews__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 50px 0;
+}
+
+.reviews__slider {
+  padding: 0 50px 0 50px;
+}
+
+.reviews__slider--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews__slider--image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.reviews__slider--name {
+  margin: 15px 0;
+}
+
+.reviews__slider--text {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.reviews__slider--text:after,
+.reviews__slider--text:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: url(/img/icons/q.svg) center/contain no-repeat;
+}
+
+.reviews__slider--text:before {
+  -webkit-transform: translate(-100%, -100%);
+      -ms-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+.reviews__slider--text:after {
+  -webkit-transform: translate(0%, 40%) scale(-1);
+      -ms-transform: translate(0%, 40%) scale(-1);
+          transform: translate(0%, 40%) scale(-1);
 }
 
 @media (min-width: 400px) {
